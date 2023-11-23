@@ -1,0 +1,154 @@
+:root{
+    --Bright-orange:  hsl(31, 77%, 52%);
+    --Dark-cyan:      hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white : hsla(0, 0%, 100%, 0.75);   /*(paragraphs)*/
+    --Very-light-gray :    hsl(0, 0%, 95%);     /*(background, headings, buttons)*/
+}
+
+html{
+    font-size: 62.3%;   /*1rem =10px*/
+}
+
+body{
+    font-size: 16px;    /*1rem =10px*/
+
+    font-family: 'Lexend Deca', sans-serif;  
+}
+
+.cuadro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /*centrar el cuadro*/
+    height: 50rem;                     /*ancho del cuadro*/
+    width:  90rem;                     /*largo del cuadro*/
+    border-radius: 1rem;
+    
+}
+
+.ajuste{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: white;
+}
+
+h2{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+}
+
+.sedan{
+    padding: 4rem;
+    background-color: var(--Bright-orange);
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.suv{
+    padding: 4rem;
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    padding: 4rem;
+    border-bottom-right-radius: 1rem ;
+    border-top-right-radius: 1rem;
+    background-color: var(--Very-dark-cyan);
+}
+
+img{
+    padding-top: 3rem;
+}
+
+.boton {
+    background-color: var(--Very-light-gray);
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5rem;
+    text-align: center;
+    border: none;
+}
+
+.orange{
+    font-size: 1.5rem;
+    color: var(--Bright-orange);
+}
+
+.cyan{
+    font-size: 1.5rem;
+    color: var(--Dark-cyan);
+}
+
+.dcyan{
+    font-size: 1.5rem;
+    color: var(--Very-dark-cyan);
+}
+
+p{
+ margin-bottom: 80px;
+}
+
+.sedan:hover{
+    .orange{
+        color: white;
+    }
+
+    .boton {
+        background-color: var(--Bright-orange);
+        border: .1rem solid;
+    }
+}
+
+.suv:hover{
+    .cyan{
+        color: white;
+    }
+
+    .boton {
+        background-color: var(--Dark-cyan);
+        border: .1rem solid;
+    }
+}
+
+.luxury:hover{
+    .dcyan{
+        color: white;
+    }
+
+    .boton {
+        background-color: var(--Very-dark-cyan);
+        border: .1rem solid;
+    }
+}
+
+footer{
+    text-align: center;
+}
+
+@media (max-width: 375px) {   /*mobile*/
+    .ajuste{
+        flex-direction: column;
+    }
+
+    .cuadro{
+        width:40rem;
+    }
+     
+    .sedan{
+        border-bottom-left-radius: 0rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    
+    .luxury{
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+}
